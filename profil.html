@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Profile - SMK SMTI Yogyakarta</title>
+    
+</head>
+
+<body>
+    <header class="bg-blue-900 fixed">
+        <nav class="text-white  p-4">
+          <div class="container mx-auto flex justify-between items-center">
+          <a href="">KEMENTRIAN PERINDUSTRIAN SMK SMTI YOGYAKARTA</a>
+          <ul class="flex space-x-6">
+            <li class="px-7 py-1 hover:text-blue-300"><a href="index.html">Home</a></li>
+            <li class="px-7 py-1 hover:text-blue-300"><a href="propilcoba.html">Profil</a></li>
+            <li class="relative group">
+              <a href="#" class="hover:text-gray-300">Kompetensi Keahlian</a>
+              <ul class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-200">
+                <li><a href="#ka.html" class="block px-4 py-2 hover:bg-gray-200">Kimia Analisis</a></li>
+                <li><a href="#ki.html" class="block px-4 py-2 hover:bg-gray-200">Kimia Industri</a></li>
+                <li><a href="#tm.html" class="block px-4 py-2 hover:bg-gray-200">Teknik Mekatronika</a></li>
+              </ul>
+            </li>
+            
+            <li class="relative group">
+              <a href="#" class="hover:text-gray-300">Informasi Lain</a>
+              <ul class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-200">
+                <li><a href="ppid.html" class="block px-4 py-2 hover:bg-gray-200">PPID</a></li>
+            <li><a href="lapor.html" class="block px-4 py-2 hover:bg-gray-200">PELAPORAN</a></li>
+            <li><a href="info.html" class="block px-4 py-2 hover:bg-gray-200">INFORMASI PUBLIK</a></li>
+            <li><a href="humas.html" class="block px-4 py-2 hover:bg-gray-200">HUMAS</a></li>
+            <li><a href="kesis.html" class="block px-4 py-2 hover:bg-gray-200">KESISWAAN</a></li>
+            <li><a href="lsp.html" class="block px-4 py-2 hover:bg-gray-200">LSP</a></li>
+            <li><a href="krklm.html" class="block px-4 py-2 hover:bg-gray-200">KURIKULUM</a></li>
+              </ul>
+            </li>        <li class="px-7 py-1 hover:text-blue-300"><a href="https://perpustakaan.smtijogja.sch.id/">Perpustakaan</a></li>
+            <li class="px-7 py-1 hover:text-blue-300"><a href="https://sis.smtijogja.sch.id/admin.php">SIS</a></li>
+            <li class="px-7 py-1 hover:text-blue-300"><a href="https://elearning.smtijogja.sch.id/login?_gl=1*1x7nds8*_ga*MjA5NDgzMDgyOS4xNzI0MjUzNjI4*_ga_M5TJ1EGV9Z*MTcyNTM3MzM4MC4xNy4xLjE3MjUzNzM1NTkuMC4wLjA.">E-Learning</a></li>
+            <li class="px-7 py-1 hover:text-blue-300"><a href="https://virtualtour.smtijogja.sch.id/?_gl=1*q8oa3o*_ga*MjA5NDgzMDgyOS4xNzI0MjUzNjI4*_ga_M5TJ1EGV9Z*MTcyNTM3MzM4MC4xNy4xLjE3MjUzNzM1OTAuMC4wLjA.">V-Tour</a></li>
+            <li class="px-7 py-1 hover:text-blue-300"><a href="" class="border-2 border-green-300 py-2 px-5 rounded-full bg-green-300">PPDB</a></li>
+            </ul>
+        </nav>
+      </header>
+
+      
+      <div class="grid grid-cols-12 gap-4 pt-32">
+      
+      <div class="col-span-3 w-96 pb-16 flex flex-col ">
+        <div class="h-fit border-r border-blue-100">
+        <nav class="flex-1 pl-0 pr-4 py-2 text-gray-400">
+          <ul>
+            <li class="mb-4">
+              <a href="#" class="block px-2 py-4 rounded-r-full hover:bg-blue-100 hover:text-blue-700 nav-link active" data-tab-target="#tab-sekilas" aria-selected="true">Sekilas SMTI Yogyakarta</a>
+            </li>
+            <li class="mb-4">
+              <a href="#" class="block px-2 py-4 rounded-r-full hover:bg-blue-100 hover:text-blue-700 nav-link" data-tab-target="#tab-visi-misi" aria-selected="false">Visi & Misi</a>
+              </li>
+            <li class="mb-4">
+              <a href="#" class="block px-2 py-4 rounded-r-full hover:bg-blue-100 hover:text-blue-700 nav-link" data-tab-target="#tab-rk" aria-selected="false">Renstra & Kebijakan</a>
+            </li>
+            <li>
+                <a href="#" class="block px-2 py-4 rounded-r-full hover:bg-blue-100 hover:text-blue-700 nav-link" data-tab-target="tab-pf" aria-selected="false">Tugas Pokok & Fungsi</a>
+            </li>
+            <li>
+                <a href="#" class="block px-2 py-4 rounded-r-full hover:bg-blue-100 hover:text-blue-700 nav-link"  data-tab-target="tab-so" aria-selected="false">Struktur Organisasi</a>
+              </li>
+              <li>
+                <a href="#" class="block px-2 py-4 rounded-r-full hover:bg-blue-100 hover:text-blue-700 nav-link" data-tab-target="tab-ag" aria-selected="false">Agenda</a>
+              </li>
+            
+          </ul>
+        </nav>
+    </div>
+      </div>
+
+      
+    <div class="col-span-9 mx-10">
+        
+      <div id="tab-sekilas" class="tab-item active">
+        <div class="text-left">
+          <h1>Profil > Sekilas SMTI Yogyakarta</h1><br>
+          <h1 class="text-4xl">Sekilas SMTI Yogyakarta</h1><br>
+          <h1>Informasi Seputar SMTI Yogyakarta</h1><br>
+        </div>
+        <div class="container w-4/5 pt-4 bg-white shadow-lg rounded-lg">
+
+        
+        <div class="tabs grid grid-cols-3">
+            <h3 class="tab-title bg-indigo-100 text-center p-4 cursor-pointer font-semibold active">Kompetensi & Akreditasi</h3>
+            <h3 class="tab-title bg-indigo-100 text-center p-4 cursor-pointer font-semibold">Informasi Umum</h3>
+            <h3 class="tab-title bg-indigo-100 text-center p-4 cursor-pointer font-semibold">Sekilas</h3>
+        </div>
+        <div class="tab-content p-10">
+            <div class="tab-item active text-gray-800 text-justify leading-relaxed">
+              <table class="w-full table-auto text-left">
+                <tr>
+                    <td class="font-bold pr-4">Nama</td>
+                    <td>SMK – SMTI Yogyakarta</td>
+                </tr>
+                <tr>
+                    <td class="font-bold pr-4">Nama Alias</td>
+                    <td>Sekolah Teknologi Menengah Atas Yogyakarta<br>SMKN Tehnologi Industri Yogyakarta</td>
+                </tr>
+                <tr>
+                    <td class="font-bold pr-4">Alamat</td>
+                    <td>Jalan Kusumanegara No. 3 RT. 25 RW. 7 Semaki, Umbulharjo, Yogyakarta, D.I. Yogyakarta 55166</td>
+                </tr>
+                <tr>
+                    <td class="font-bold pr-4">Telepon</td>
+                    <td>0274-513201 / 0274-512125</td>
+                </tr>
+                <tr>
+                    <td class="font-bold pr-4">Email</td>
+                    <td>smti@smtijogja.sch.id</td>
+                </tr>
+              </table>    
+            </div>
+            <div class="tab-item hidden  text-gray-800 text-justify leading-relaxed">
+              <table class="w-full table-auto text-left">
+                <tr>
+                  <td class="font-bold pr-4 align-top">STATUS</td>
+                  <td class="align-top">SMK Negeri</td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4 align-top">STANDAR</td>
+                  <td class="align-top">
+                      <ul class="list-none list-inside">
+                          <li>- Kurikulum Nasional</li>
+                          <li>- Kurikulum Internasional</li>
+                          <li>- Standart Kompetensi Kerja Nasional Indonesia (SKKNI)</li>
+                      </ul>
+                  </td>
+                </tr>
+                <tr>
+                    <td class="font-bold pr-4 align-top">BIDANG KEAHLIAN</td>
+                    <td>Teknologi dan Rekayasa</td>
+                </tr>
+                <tr>
+                    <td class="font-bold pr-4 align-top">KOMPETENSI KEAHLIAN</td>
+                    <td>Teknik Kimia</td>
+                </tr>
+                <tr>
+                    <td class="font-bold pr-4 align-top">PROGRAM STUDI KEAHLIAN</td>
+                    <td>Kimia Analisis & Kimia Industri</td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4 align-top">KOMPETENSI KEAHLIAN</td>
+                  <td>Teknik Elektronika</td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4 align-top">PROGRAM STUDI KEAHLIAN</td>
+                  <td>Teknik Mekatronika</td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4 align-top">SERTIFIKAT AKREDITASI</td>
+                  <td class="align-top">
+                    <ul class="list-none list-inside">
+                        <li>Jurusan Kimia Analisis : No : 21.01/BAP-SM/TU/XII/2013</li>
+                        <li>Peringkat A (sangat baik) - Berlaku hingga tahun 2018</li><br>
+                        <li>Jurusan Kimia Industri : No : 21.01/BAP-SM/TU/XII/2013</li>
+                        <li>Peringkat A (sangat baik) - Berlaku hingga tahun 2018</li><br>
+                        <li>Jurusan Teknik Mekatronika : Belum Meluluskan</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4 align-top">NPSN</td>
+                  <td>20407427</td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4 align-top">NIS</td>
+                  <td>179148</td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4 align-top">NSS</td>
+                  <td>401046008001</td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4 align-top">ID UN</td>
+                  <td>K0401133</td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4align-top">KODE UAKPB</td>
+                  <td>019.01.0200.247182.000.KD</td>
+                </tr>
+              </table>
+            </div>
+            <div class="tab-item hidden">
+                <p class="text-gray-800 text-justify leading-relaxed">Sekolah Menengah Kejuruan SMTI Yogyakarta didirikan pada tahun 1947 dengan nama Sekolah Teknologi Menengah Atas (STMA). Pada tahun 1985 sekolah kami berganti nama menjadi Sekolah Menengah Teknologi Industri (SMTI). Kemudian, pada bulan Agustus 2011 nomenklatur SMTI berubah menjadi Sekolah Menengah Kejuruan SMTI (SMK-SMTI) sesuai dengan peraturan Menteri Perindustrian No. 77/M-Ind/Per/8/2011.</p><br>
+
+                <p>Sejak tahun pelajaran 2010/2011 kami mempunyai program keahlian Kimia Analisis dan Kimia Industri yang bertaraf internasional. Kemudian di tahun pelajaran 2016/2017 kami membuka program keahlian baru yaitu Teknik Mekatronika.</p><br>
+                  
+                <p>Motto Sekolah</p><br>
+                  
+                  <p>TOP: Terdepan, Optimal, Proaktif</p>
+            </div>
+        </div>
+      </div>
+
+      
+      </div>
+      <div id="tab-visi-misi" class="tab-item hidden pb-12">
+        <div class="text-left">
+          <h1>Profil > Visi & Misi</h1><br>
+          <h1 class="text-4xl">Visi & Misi SMTI Yogyakarta</h1><br>
+        </div>
+        <img src="vscode/image/visimisi.png"><br>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="container h-fit bg-white shadow-lg rounded-lg">
+            <h1 class="px-4 pt-4 text-4xl">Visi</h1>
+            <p class="p-4">Menjadi penyelenggara pendidikan kejuruan industri yang excellence dan bertaraf internasional.</p>
+          </div>
+          <div class="container h-fit bg-white shadow-lg rounded-lg">
+            <h1 class="px-4 pt-4 text-4xl">Misi</h1>
+            <ul class="list-disc pr-4 py-4 pl-12">
+              <li class="text-justify">Menyelenggarakan pendidikan kejuruan dual system dengan STEM learning model bertaraf internasional;</li>
+              <li class="text-justify">Melaksanakan pengabdian masyarakat dalam pengembangan ekosistem IKM;</li>
+              <li class="text-justify">Mengembangkan kompetensi industri 4.0 melalui pembangunan satelit PIDI 4.0;</li>
+              <li class="text-justify">Mengembangkan skema kompetensi dan uji kompetensi LSP;</li>
+              <li class="text-justify">Mengembangkan kelas industri.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div id="tab-rk" class="tab-item hidden pb-12">
+        <div class="text-left">
+          <h1>Profil > Renstra & Kebijakan</h1><br>
+          <h1 class="text-4xl">Rencana Strategis & Kebijakan</h1><br>
+        </div>
+        <img src="vscode/image/visimisi.png"><br>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="container h-fit bg-white shadow-lg rounded-lg">
+            <h1 class="px-4 pt-4 text-4xl">Visi</h1>
+            <p class="p-4">Menjadi penyelenggara pendidikan kejuruan industri yang excellence dan bertaraf internasional.</p>
+          </div>
+          <div class="container h-fit bg-white shadow-lg rounded-lg">
+            <h1 class="px-4 pt-4 text-4xl">Misi</h1>
+            <ul class="list-disc pr-4 py-4 pl-12">
+              <li class="text-justify">Menyelenggarakan pendidikan kejuruan dual system dengan STEM learning model bertaraf internasional;</li>
+              <li class="text-justify">Melaksanakan pengabdian masyarakat dalam pengembangan ekosistem IKM;</li>
+              <li class="text-justify">Mengembangkan kompetensi industri 4.0 melalui pembangunan satelit PIDI 4.0;</li>
+              <li class="text-justify">Mengembangkan skema kompetensi dan uji kompetensi LSP;</li>
+              <li class="text-justify">Mengembangkan kelas industri.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div id="tab-pf" class="tab-item hidden">
+        <div class="text-left">
+          <h1>Profil > Tugas Pokok & Fungsi</h1><br>
+          <h1 class="text-4xl">Tugas Pokok & Fungsi</h1><br>
+        </div>
+        <div class="container w-4/5 pt-4 bg-white shadow-lg rounded-lg">
+        <div class="tabs grid grid-cols-2">
+            <h3 class="tab-title bg-indigo-100 text-center p-4 cursor-pointer font-semibold active">Tugas Pokok</h3>
+            <h3 class="tab-title bg-indigo-100 text-center p-4 cursor-pointer font-semibold">Fungsi</h3>
+        </div>
+        <div class="tab-content p-10">
+            <div class="tab-item active text-gray-800 text-justify leading-relaxed">
+              <h1 class="text-3xl">Dalam mengemban Visi dan Misi SMTI Yogyakarta memiliki Tugas Pokok :</h1><br>
+              <h1>" Melaksanakan Pendidikan Kejuruan formal teknologi industri bagi tamatan Sekolah Lanjutan Tingkat Pertama (SLTP ) sesuai peraturan perundang-undangan yang berlaku, untuk menghasilkan tenaga-tenaga ahli teknologi menengah di bidang industri dengan menggunakan laboratorium, perbengkelan dan sarana fisik lainnya."</h1> 
+            </div>
+            <div class="tab-item hidden text-gray-800 text-justify leading-relaxed">
+                <h1 class="text-3xl">Untuk menyelenggarakan Tugas Pokok SMK-SMTI Yogyakarta memiliki fungsi :
+                </h1><br>
+
+                <p>Sejak tahun pelajaran 2010/2011 kami mempunyai program keahlian Kimia Analisis dan Kimia Industri yang bertaraf internasional. Kemudian di tahun pelajaran 2016/2017 kami membuka program keahlian baru yaitu Teknik Mekatronika.</p><br>
+                  
+                <p>Motto Sekolah</p><br>
+                  
+                  <p>TOP: Terdepan, Optimal, Proaktif</p>
+            </div>
+        </div>
+      </div>
+      </div>
+  
+      <div id="tab-so" class="tab-item hidden">
+        <div class="text-left">
+          <h1>Profil > Renstra & Kebijakan</h1><br>
+          <h1 class="text-4xl">Rencana Strategis & Kebijakan</h1><br>
+        </div>
+        <img src="vscode/image/visimisi.png"><br>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="container h-fit bg-white shadow-lg rounded-lg">
+            <h1 class="px-4 pt-4 text-4xl">Visi</h1>
+            <p class="p-4">Menjadi penyelenggara pendidikan kejuruan industri yang excellence dan bertaraf internasional.</p>
+          </div>
+          <div class="container h-fit bg-white shadow-lg rounded-lg">
+            <h1 class="px-4 pt-4 text-4xl">Misi</h1>
+            <ul class="list-disc pr-4 py-4 pl-12">
+              <li class="text-justify">Menyelenggarakan pendidikan kejuruan dual system dengan STEM learning model bertaraf internasional;</li>
+              <li class="text-justify">Melaksanakan pengabdian masyarakat dalam pengembangan ekosistem IKM;</li>
+              <li class="text-justify">Mengembangkan kompetensi industri 4.0 melalui pembangunan satelit PIDI 4.0;</li>
+              <li class="text-justify">Mengembangkan skema kompetensi dan uji kompetensi LSP;</li>
+              <li class="text-justify">Mengembangkan kelas industri.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <div id="tab-ag" class="tab-item hidden">
+        <!-- Agenda Content -->
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Get all nav links and tab items
+    const navLinks = document.querySelectorAll('.nav-link');
+    const tabItems = document.querySelectorAll('.tab-item');
+  
+    // Function to show the selected tab
+    function showTab(target) {
+      // Remove active class from all tabs and nav links
+      navLinks.forEach(link => link.classList.remove('active'));
+      tabItems.forEach(tab => tab.classList.add('hidden'));
+  
+      // Add active class to clicked link and show the corresponding tab
+      document.querySelector(target).classList.remove('hidden');
+      document.querySelector(`[data-tab-target="${target}"]`).classList.add('active');
+    }
+  
+    // Add click event to all nav links
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = this.getAttribute('data-tab-target');
+        showTab(target);
+      });
+    });
+  </script>
+    </div>
+  
+  
+  
+  
+
+    <script>
+        const tabs = document.querySelectorAll('.tab-title');
+        const tabContents = document.querySelectorAll('.tab-item');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                tabContents.forEach((content) => {
+                    content.classList.add('hidden');
+                });
+                tabs.forEach((tab) => {
+                    tab.classList.remove('active');
+                    tab.classList.replace('bg-white', 'bg-indigo-100');
+                    tab.classList.remove('text-indigo-600');
+                });
+
+                tabContents[index].classList.remove('hidden');
+                tab.classList.add('active');
+                tab.classList.replace('bg-indigo-100', 'bg-white');
+                tab.classList.add('text-indigo-600');
+            });
+        });
+    </script> 
+
+      <div>
+        
+
+        </div>
+      </div>
+
+      <footer class="bg-cyan-900 text-white py-12">
+        <div class="grid grid-rows-1 grid-cols-3 mx-72">
+          <div class="pr-9">
+            <img src="vscode/image/footer-logo.png">
+            <p class="pt-4">In Association with</p>
+            <div class="flex space-x-4 mt-4">
+              <img src="vscode/image/association-logo-1.png" alt="Logo 1" class="w-64 h-12 object-contain">
+              <img src="vscode/image/association-logo-2.png" alt="Logo 2" class="w-12 h-12 object-contain">
+              <img src="vscode/image/association-logo-3.png" alt="Logo 3" class="w-12 h-12 object-contain">
+              <img src="vscode/image/association-logo-4.png" alt="Logo 4" class="w-12 h-12 object-contain">
+            </div>
+          </div>
+          <div class="flex flex-col items-center">
+            <h3 class="font-semibold mb-4 text-lg">LINK PENTING</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="https://ppdb.smtijogja.sch.id/?_gl=1*1gejy6l*_ga*MjA5NDgzMDgyOS4xNzI0MjUzNjI4*_ga_M5TJ1EGV9Z*MTcyNTk3Njg1My4yNC4wLjE3MjU5NzY4NTMuMC4wLjA." class="whitespace-nowrap hover:text-green-300">PPDB</a></li>
+              <li><a href="https://virtualtour.smtijogja.sch.id/?_gl=1*1gqq97j*_ga*MjA5NDgzMDgyOS4xNzI0MjUzNjI4*_ga_M5TJ1EGV9Z*MTcyNTk3Njg1My4yNC4xLjE3MjU5NzY4NzUuMC4wLjA." class="whitespace-nowrap hover:text-green-300">Virtual Tour</a></li>
+              <li><a href="https://api.whatsapp.com/send/?phone=6281325558181&text&type=phone_number&app_absent=0" class="whitespace-nowrap hover:text-green-300">Hotline WA</a></li>
+              <li><a href="https://accounts.cdcbpsdmi.kemenperin.go.id/login?client_id=foEo9GUj9kDmus5A&state=92d0e790a2111a3712a097d060559c4be3339befe6cdf299b61d08d229a85a0d&redirect_uri=https%3A%2F%2Fcdcbpsdmi.kemenperin.go.id%2Fauth%2Fcallback" class="whitespace-nowrap hover:text-green-300">Tracer Study CDC</a></li>
+              <li><a href="https://drive.google.com/file/d/1drYJ2GrRNniMyR8eJ35SRc7PTI8oREj1/view" class="whitespace-nowrap hover:text-green-300">Safety Induction</a></li>
+           </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-4 text-lg">KONTAK KAMI</h3>
+        <ul class="space-y-2 text-sm">
+          <li>Telepon  : (0274) 513201</a></li>
+          <li>Faksimile  : (0274) 512121</a></li>
+          <li>WhatsApp  : (+62) 813 2555 8181</a></li>
+          <li class="flex space-x-2 mt-2">
+            <a href="#"><img src="vscode/image/logo-gmail.svg" class="w-6 h-6" alt="Gmail"></a>
+            <a href="#"><img src="vscode/image/instagram-new.svg" class="w-6 h-6" alt="Instagram"></a>
+            <a href="#"><img src="vscode/image/facebook-new.svg" class="w-6 h-6" alt="Facebook"></a>
+            <a href="#"><img src="vscode/image/tiktok-new.svg" class="w-6 h-6" alt="TikTok"></a>
+            <a href="#"><img src="vscode/image/twitter-new.svg" class="w-6 h-6" alt="Twitter"></a>
+            <a href="#"><img src="vscode/image/youtube-new.svg" class="w-6 h-6" alt="YouTube"></a>
+            <a href="#"><img src="vscode/image/whatsapp-new.svg" class="w-6 h-6" alt="WhatsApp"></a>
+          </li>
+          <li class="text-sm mt-4">Jl. Kusumanegara No.3, Semaki, Kec. Umbulharjo, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55166</li>
+       </ul>
+      </div>
+    </div>
+    <div class="container-fluid pt-8 mx-2">
+      <hr>
+    </div> 
+    <div class="text-center pt-8">
+    <h3>HAK CIPTA © 2020 SMK-SMTI YOGYAKARTA</h3>
+      </div>
+      </footer>
+
+
+     
+    <script>
+      // Select all sidebar links and tab content elements
+const sidebarLinks = document.querySelectorAll('nav a[data-tab-target]');
+const tabContents = document.querySelectorAll('.tab-content');
+
+// Function to handle showing the correct tab content
+function showTabContent(event) {
+  event.preventDefault();
+  
+  // Remove 'active' class from all links and hide all tab contents
+  sidebarLinks.forEach(link => link.classList.remove('active'));
+  tabContents.forEach(content => content.classList.add('hidden'));
+  
+  // Add 'active' class to clicked link
+  event.target.classList.add('active');
+  
+  // Show the tab content corresponding to the clicked link
+  const targetTab = document.querySelector(event.target.getAttribute('data-tab-target'));
+  targetTab.classList.remove('hidden');
+}
+
+// Attach click event listener to all sidebar links
+sidebarLinks.forEach(link => {
+  link.addEventListener('click', showTabContent);
+});
+
+    </script>
+
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Select all dropdown buttons and menus
+                const dropdownButtons = document.querySelectorAll('[id^="dropdownMenuButton"]');
+                const dropdownMenus = document.querySelectorAll('[id^="dropdownMenu"]');
+            
+                dropdownButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        // Find the corresponding dropdown menu
+                        const targetMenuId = this.id.replace('Button', '');
+                        const targetMenu = document.getElementById(targetMenuId);
+                        
+                        // Toggle visibility of the target menu
+                        targetMenu.classList.toggle('hidden');
+                    });
+                });
+            
+                document.addEventListener('click', function(event) {
+                    // Close dropdowns if the click is outside of any dropdown
+                    if (![...dropdownButtons].some(button => button.contains(event.target))) {
+                        dropdownMenus.forEach(menu => menu.classList.add('hidden'));
+                    }
+                });
+            });
+            
+            
+            </script>
+      
+      
+
+</body>
+</html>

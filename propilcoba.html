@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Profile - SMK SMTI Yogyakarta</title>
+    
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header class="bg-blue-800  text-white  text-sm md:text-base px-4 md:px-10 py-4">
+        <nav>
+          <div class="container mx-auto flex flex-col md:flex-row items-center md:justify-between">
+            <div class="flex justify-between items-center w-full md:w-auto">
+              <div class="flex items-center space-x-4">
+                <img src="vscode/image/logosmiti.png" alt="Logo" class="h-12">
+                <div class="text-left">
+                  <h1 class="text-xs">KEMENTERIAN PERINDUSTRIAN</h1>
+                  <h2 class="text-lg font-semibold">SMK-SMTI YOGYAKARTA</h2>
+                </div>
+              </div>
+    
+              <button class="md:hidden text-gray-900" id="menuToggle" onclick="toggleBurgerMenu()">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+    
+            <div >
+              <ul class="hidden space-x-6 lg:flex" id="navMenu">
+                <li class="px-4 py-1 hover:text-blue-300"><a href="index.html">Home</a></li>
+                <li class="px-4 py-1 hover:text-blue-300"><a href="propilcoba.html">Profil</a></li>
+                <li class="relative group">
+                  <a href="#" class="hover:text-gray-300 py-1 px-4 inline-block">Kompetensi Keahlian</a>
+                  <ul class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-200">
+                    <li><a href="ka.html" class="block px-4 py-2 hover:bg-gray-200">Kimia Analisis</a></li>
+                    <li><a href="ki.html" class="block px-4 py-2 hover:bg-gray-200">Kimia Industri</a></li>
+                    <li><a href="tm.html" class="block px-4 py-2 hover:bg-gray-200">Teknik Mekatronika</a></li>
+                  </ul>
+                </li>
+                
+                <li class="relative group">
+                  <a href="#" class="hover:text-gray-300 py-1 px-4 inline-block">Informasi Lain</a>
+                  <ul class="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-200">
+                    <li><a href="ppid.html" class="block px-4 py-2 hover:bg-gray-200">PPID</a></li>
+                    <li><a href="lapor.html" class="block px-4 py-2 hover:bg-gray-200">PELAPORAN</a></li>
+                    <li><a href="info.html" class="block px-4 py-2 hover:bg-gray-200">INFORMASI PUBLIK</a></li>
+                    <li><a href="humas.html" class="block px-4 py-2 hover:bg-gray-200">HUMAS</a></li>
+                    <li><a href="kesis.html" class="block px-4 py-2 hover:bg-gray-200">KESISWAAN</a></li>
+                    <li><a href="lsp.html" class="block px-4 py-2 hover:bg-gray-200">LSP</a></li>
+                    <li><a href="krklm.html" class="block px-4 py-2 hover:bg-gray-200">KURIKULUM</a></li>
+                  </ul>
+                </li>
+                        
+                <li class="px-4 py-1 hover:text-blue-300"><a href="https://perpustakaan.smtijogja.sch.id/">Perpustakaan</a></li>
+                <li class="px-4 py-1 hover:text-blue-300"><a href="https://sis.smtijogja.sch.id/admin.php">SIS</a></li>
+                <li class="px-4 py-1 hover:text-blue-300"><a href="https://elearning.smtijogja.sch.id/login?_gl=1*1x7nds8*_ga*MjA5NDgzMDgyOS4xNzI0MjUzNjI4*_ga_M5TJ1EGV9Z*MTcyNTM3MzM4MC4xNy4xLjE3MjUzNzM1NTkuMC4wLjA.">E-Learning</a></li>
+                <li class="px-4 py-1 hover:text-blue-300"><a href="https://virtualtour.smtijogja.sch.id/?_gl=1*q8oa3o*_ga*MjA5NDgzMDgyOS4xNzI0MjUzNjI4*_ga_M5TJ1EGV9Z*MTcyNTM3MzM4MC4xNy4xLjE3MjUzNzM1OTAuMC4wLjA.">V-Tour</a></li>
+                <li class="px-4 py-1 hover:text-blue-300"><a href="https://ppdb.smtijogja.sch.id/?_gl=1*16gmy7f*_ga*MjA5NDgzMDgyOS4xNzI0MjUzNjI4*_ga_M5TJ1EGV9Z*MTcyOTkyNjc4OC42My4xLjE3Mjk5Mjg5OTAuMC4wLjA." class="border-2 border-green-300 py-2 px-5 rounded-full bg-green-300">PPDB</a></li>
+              </ul>
+            </div>
+    
+            <div id="burgerMenu" class="hidden flex-col mt-2 md:hidden bg-white text-gray-900 rounded-lg shadow-lg w-full">
+              <a href="index.html" class="block px-4 py-2 hover:bg-gray-100">Home</a>
+              <a href="propilcoba.html" class="block px-4 py-2 hover:bg-gray-100">Profil</a>
+              <div>
+                <button onclick="toggleSubMenu('kompetensiSubMenu')" class="w-full text-left px-4 py-2 hover:bg-gray-100">
+                  Kompetensi Keahlian
+                </button>
+                <div id="kompetensiSubMenu" class="hidden flex-col space-y-1 ml-4">
+                  <a href="ka.html" class="block px-4 py-2 hover:bg-gray-200">Kimia Analisis</a>
+                  <a href="ki.html" class="block px-4 py-2 hover:bg-gray-200">Kimia Industri</a>
+                  <a href="tm.html" class="block px-4 py-2 hover:bg-gray-200">Teknik Mekatronika</a>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <button onclick="toggleSubMenu('informasiSubMenu')" class="w-full text-left px-4 py-2 hover:bg-gray-100">
+                    Informasi Lain
+                  </button>
+                  <div id="informasiSubMenu" class="hidden flex-col space-y-1 ml-4">
+                    <a href="ppid.html" class="block px-4 py-2 hover:bg-gray-200">PPID</a>
+                    <a href="lapor.html" class="block px-4 py-2 hover:bg-gray-200">PELAPORAN</a>
+                    <a href="info.html" class="block px-4 py-2 hover:bg-gray-200">INFORMASI PUBLIK</a>
+                    <a href="humas.html" class="block px-4 py-2 hover:bg-gray-200">HUMAS</a>
+                    <a href="kesis.html" class="block px-4 py-2 hover:bg-gray-200">KESISWAAN</a>
+                    <a href="lsp.html" class="block px-4 py-2 hover:bg-gray-200">LSP</a>
+                    <a href="krklm.html" class="block px-4 py-2 hover:bg-gray-200">KURIKULUM</a>
+                  </div>
+                </div>
+              <a href="https://perpustakaan.smtijogja.sch.id/" class="block px-4 py-2 hover:bg-gray-100">Perpustakaan</a>
+              <a href="https://sis.smtijogja.sch.id/admin.php" class="block px-4 py-2 hover:bg-gray-100">SIS</a>
+              <a href="https://elearning.smtijogja.sch.id/login?_gl=1*1x7nds8*_ga*MjA5NDgzMDgyOS4xNzI0MjUzNjI4*_ga_M5TJ1EGV9Z*MTcyNTM3MzM4MC4xNy4xLjE3MjUzNzM1NTkuMC4wLjA." class="block px-4 py-2 hover:bg-gray-100">E-Learning</a>
+              <a href="https://virtualtour.smtijogja.sch.id/?_gl=1*q8oa3o*_ga*MjA5NDgzMDgyOS4xNzI0MjUzNjI4*_ga_M5TJ1EGV9Z*MTcyNTM3MzM4MC4xNy4xLjE3MjUzNzM1OTAuMC4wLjA." class="block px-4 py-2 hover:bg-gray-100">V-Tour</a>
+              <a href="https://ppdb.smtijogja.sch.id/?_gl=1*16gmy7f*_ga*MjA5NDgzMDgyOS4xNzI0MjUzNjI4*_ga_M5TJ1EGV9Z*MTcyOTkyNjc4OC42My4xLjE3Mjk5Mjg5OTAuMC4wLjA." class="block border-2 border-green-300 py-2 px-5 rounded-full bg-green-300 text-center">PPDB</a>
+            </div>
+          
+          
+          </div>
+        </nav>
+      </header>
+    
+      <script>
+        // Toggle main burger menu
+        function toggleBurgerMenu() {
+          const burgerMenu = document.getElementById('burgerMenu');
+          burgerMenu.classList.toggle('hidden');
+        }
+    
+        // Toggle submenu
+        function toggleSubMenu(subMenuId) {
+          const subMenu = document.getElementById(subMenuId);
+          subMenu.classList.toggle('hidden');
+        }
+      </script>
+      
+      <style>
+        @media (min-width: 1024px) {
+    .custom-rounded {
+        border-radius: 0 9999px 9999px 0; /* Equivalent to rounded-r-full */
+    }
+}
+      </style>
+
+      <div class="grid xl:grid-cols-12 gap-4 pt-12">
+        <div class="xl:col-span-3 w-96 pb-16 xl:flex xl:flex-col">
+            <div class="xl:h-full xl:border-r xl:border-blue-100 xl:flex-shrink-0">
+                <nav class="flex-1 ml-16 xl:mx-0 xl:pl-0 xl:pr-4 xl:py-2 text-gray-400">
+                    <ul class="flex xl:flex-col gap-2  whitespace-nowrap flex-row overflow-x-auto">
+                        <li class="mb-4 sm:mb-0">
+                          <button     
+                          data-target="section-sekilas" 
+                          class="nav-btn active block md:text-left w-full px-4 py-4 rounded-full custom-rounded  hover:bg-blue-100 hover:text-blue-700 transition-all duration-300" 
+                          onclick="activateSection('section-sekilas')">
+                          Sekilas SMTI Yogyakarta
+                      </button>
+                        </li>
+                        <li class="mb-4 sm:mb-0">
+                            <button data-target="section-visimisi" class="nav-btn block text-left w-full px-4 py-4 rounded-full custom-rounded hover:bg-blue-100 hover:text-blue-700 transition-all duration-300" onclick="activateSection('section-visimisi')">Visi & Misi</button>
+                        </li>
+                        <li class="mb-4 sm:mb-0">
+                            <button data-target="section-pf" class="nav-btn block text-left w-full px-4 py-4 rounded-full custom-rounded hover:bg-blue-100 hover:text-blue-700 transition-all duration-300" onclick="activateSection('section-pf')">Tugas Pokok & Fungsi</button>
+                        </li>
+                        <li class="mb-4 sm:mb-0">
+                            <button data-target="section-so" class="nav-btn block text-left w-full px-4 py-4 rounded-full custom-rounded hover:bg-blue-100 hover:text-blue-700 transition-all duration-300" onclick="activateSection('section-so')">Struktur Organisasi</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    
+        <div class="xl:col-span-9 mx-10">
+        <div id="section-sekilas" class="section">
+        <div class="text-left">
+          <h1>Profil > Sekilas SMTI Yogyakarta</h1><br>
+          <h1 class="text-4xl">Sekilas SMTI Yogyakarta</h1><br>
+          <h1>Informasi Seputar SMTI Yogyakarta</h1><br>
+        </div>
+        <div class="container md:w-4/5 pt-4 bg-white shadow-lg rounded-lg">
+        <div class="tabs grid grid-cols-3">
+            <h3 class="tab-title bg-indigo-100 text-center p-4 cursor-pointer font-semibold active">Kompetensi & Akreditasi</h3>
+            <h3 class="tab-title bg-indigo-100 text-center p-4 cursor-pointer font-semibold">Informasi Umum</h3>
+            <h3 class="tab-title bg-indigo-100 text-center p-4 cursor-pointer font-semibold">Sekilas</h3>
+        </div>
+        <div class="tab-content p-10">
+            <div class="tab-item active text-gray-800 text-justify leading-relaxed">
+              <table class="w-full table-auto text-left">
+                <tr>
+                    <td class="font-bold pr-4">Nama</td>
+                    <td>SMK – SMTI Yogyakarta</td>
+                </tr>
+                <tr>
+                    <td class="font-bold pr-4">Nama Alias</td>
+                    <td>Sekolah Teknologi Menengah Atas Yogyakarta<br>SMKN Tehnologi Industri Yogyakarta</td>
+                </tr>
+                <tr>
+                    <td class="font-bold pr-4">Alamat</td>
+                    <td>Jalan Kusumanegara No. 3 RT. 25 RW. 7 Semaki, Umbulharjo, Yogyakarta, D.I. Yogyakarta 55166</td>
+                </tr>
+                <tr>
+                    <td class="font-bold pr-4">Telepon</td>
+                    <td>0274-513201 / 0274-512125</td>
+                </tr>
+                <tr>
+                    <td class="font-bold pr-4">Email</td>
+                    <td>smti@smtijogja.sch.id</td>
+                </tr>
+              </table>    
+            </div>
+            <div class="tab-item hidden  text-gray-800 text-justify leading-relaxed">
+              <table class="w-full table-auto text-left">
+                <tr>
+                  <td class="font-bold pr-4 align-top">STATUS</td>
+                  <td class="align-top">SMK Negeri</td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4 align-top">STANDAR</td>
+                  <td class="align-top">
+                      <ul class="list-none list-inside">
+                          <li>- Kurikulum Nasional</li>
+                          <li>- Kurikulum Internasional</li>
+                          <li>- Standart Kompetensi Kerja Nasional Indonesia (SKKNI)</li>
+                      </ul>
+                  </td>
+                </tr>
+                <tr>
+                    <td class="font-bold pr-4 align-top">BIDANG KEAHLIAN</td>
+                    <td>Teknologi dan Rekayasa</td>
+                </tr>
+                <tr>
+                    <td class="font-bold pr-4 align-top">KOMPETENSI KEAHLIAN</td>
+                    <td>Teknik Kimia</td>
+                </tr>
+                <tr>
+                    <td class="font-bold pr-4 align-top">PROGRAM STUDI KEAHLIAN</td>
+                    <td>Kimia Analisis & Kimia Industri</td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4 align-top">KOMPETENSI KEAHLIAN</td>
+                  <td>Teknik Elektronika</td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4 align-top">PROGRAM STUDI KEAHLIAN</td>
+                  <td>Teknik Mekatronika</td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4 align-top">SERTIFIKAT AKREDITASI</td>
+                  <td class="align-top">
+                    <ul class="list-none list-inside">
+                        <li>Jurusan Kimia Analisis : No : 21.01/BAP-SM/TU/XII/2013</li>
+                        <li>Peringkat A (sangat baik) - Berlaku hingga tahun 2018</li><br>
+                        <li>Jurusan Kimia Industri : No : 21.01/BAP-SM/TU/XII/2013</li>
+                        <li>Peringkat A (sangat baik) - Berlaku hingga tahun 2018</li><br>
+                        <li>Jurusan Teknik Mekatronika : Belum Meluluskan</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4 align-top">NPSN</td>
+                  <td>20407427</td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4 align-top">NIS</td>
+                  <td>179148</td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4 align-top">NSS</td>
+                  <td>401046008001</td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4 align-top">ID UN</td>
+                  <td>K0401133</td>
+                </tr>
+                <tr>
+                  <td class="font-bold pr-4align-top">KODE UAKPB</td>
+                  <td>019.01.0200.247182.000.KD</td>
+                </tr>
+              </table>
+            </div>
+            <div class="tab-item hidden">
+                <p class="text-gray-800 text-justify leading-relaxed">Sekolah Menengah Kejuruan SMTI Yogyakarta didirikan pada tahun 1947 dengan nama Sekolah Teknologi Menengah Atas (STMA). Pada tahun 1985 sekolah kami berganti nama menjadi Sekolah Menengah Teknologi Industri (SMTI). Kemudian, pada bulan Agustus 2011 nomenklatur SMTI berubah menjadi Sekolah Menengah Kejuruan SMTI (SMK-SMTI) sesuai dengan peraturan Menteri Perindustrian No. 77/M-Ind/Per/8/2011.</p><br>
+
+                <p>Sejak tahun pelajaran 2010/2011 kami mempunyai program keahlian Kimia Analisis dan Kimia Industri yang bertaraf internasional. Kemudian di tahun pelajaran 2016/2017 kami membuka program keahlian baru yaitu Teknik Mekatronika.</p><br>
+                  
+                <p>Motto Sekolah</p><br>
+                  
+                  <p>TOP: Terdepan, Optimal, Proaktif</p>
+            </div>
+        </div>
+      </div>
+      <div class="pt-8 text-left">
+        <h1>Makna Logo SMK SMTI Yogyakarta</h1>
+      </div>
+      <div class=" pt-8 grid md:grid-cols-12 gap-4">
+        <div class="md:col-span-2">
+            <img src="vscode/image/logosmti.png">
+        </div>
+        <div class="md:mt-8 md:col-span-10 ">
+            <button class="rounded-full bg-green-400 hover:bg-green-700 text-white py-2 px-4">
+                <a href="https://www.smtijogja.sch.id/mediakit/Logo%20SMTI%20Yk%20Transparan.png" download>
+                  <i class="fas fa-download"></i> Download Logo SMTI
+                </a>
+            </button><br>
+            <button class="mt-4 rounded-full bg-green-400 hover:bg-green-700 text-white py-2 px-4">
+                <a href="https://drive.google.com/file/d/1UW1T7L4E_N7k4jPlxVsqy0NrDarfNQ2y/view" download>
+                  <i class="fas fa-download"></i> Download Logo Kemenperin + Corpu + ZI + SMTI (combined)
+                </a>
+            </button>
+        </div>
+      </div>
+      <div class="container md:w-4/5 pt-4 bg-white shadow-lg rounded-lg">
+        <div class="tabs grid grid-cols-2">
+            <h3 class="tab-title bg-indigo-100 text-center p-4 cursor-pointer font-semibold active">Makna Warna</h3>
+            <h3 class="tab-title bg-indigo-100 text-center p-4 cursor-pointer font-semibold">Makna Simbol</h3>
+        </div>
+        <div class="tab-content p-10 mb-10">
+            <div class="tab-item active text-gray-800 text-justify leading-relaxed">
+                <div class="grid md:grid-cols-12 gap-0">
+                    <div class="md:col-span-2 pt-2 pb-3">
+                        <div class="w-10 h-10 rounded-full" style="background-color: #7AC943;"></div>
+                    </div>
+                    <div class="md:col-span-10 pb-3">
+                            <p>Lambang Pertumbuhan, Kemakmuran, dan ketentraman yang merupakan harapan warga wiyata akan terus berkembang sesuai dengan visi & misi sekolah, serta berwawasan lingkungan</p>
+                    </div>  
+                    <div class="md:col-span-2 pt-2 pb-3">
+                        <div class="w-10 h-10 rounded-full" style="background-color: #ED1C24;"></div>
+                    </div>
+                    <div class="md:col-span-10 pb-3">
+                            <p>Lambang Keberanian & Kegagahan, semangat menegakkan kebenaran serta mengikis kebatilan dan kemungkaran.</p>
+                    </div>  
+                    <div class="md:col-span-2 pt-2 pb-3">
+                        <div class="w-10 h-10 rounded-full" style="background-color: #2E3192;"></div>
+                    </div>
+                    <div class="md:col-span-10 pb-3">
+                            <p>Lambang Kependidikan [sekolah], Kebenaran, Percaya diri, kemandirian, dan teknologi.</p>
+                    </div>  
+                    <div class="md:col-span-2 pt-2 pb-3">
+                        <div class="w-10 h-10 rounded-full" style="background-color: #FCEE21;"></div>
+                    </div>
+                    <div class="md:col-span-10 pb-3">
+                            <p>Lambang Kemuliaan, dan penegasan akan keluhuran akhlak.</p>
+                    </div> 
+                    <div class="md:col-span-2 pt-2 pb-3">
+                        <div class="w-10 h-10 rounded-full" style="background-color: #231F20;"></div>
+                    </div>
+                    <div class="md:col-span-10 pb-3">
+                            <p>Lambang Spiritualitas, Ketegeguhan, dan kemantapan pribadi [profesionalisme] semua warga wiyata.</p>
+                    </div>   
+                </div>
+            </div>
+            <div class="tab-item hidden text-gray-800 text-justify leading-relaxed">
+                <h1 class="text-xl">Untuk menyelenggarakan Tugas Pokok SMK-SMTI Yogyakarta memiliki fungsi :
+                </h1><br>
+                <div class="grid md:grid-cols-12 gap-0">
+                    <div class="md:col-span-2">
+                    <img src="vscode/image/obor.png" class="w-32">
+                    </div>
+                    <div class="md:col-span-10 pt-10">
+                        <p>Nyala Api [obor] : Melambangkan semangat belajar nan tak kunjung padam, dan tujuan belajar untuk mendapatkan penerangan dan petunjuk serta ridho illahi Rabbi.</p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <img src="vscode/image/daun.png" class="w-32">
+                        </div>
+                    <div class="md:col-span-10 pt-10">
+                            <p>Daun Hijau : Melambangkan Sekolah berwawasan Lingkungan dengan konsep eco industry.</p>
+                    </div>
+                    <div class="md:col-span-2">
+                            <img src="vscode/image/gear.png" class="w-32">
+                    </div>
+                    <div class="md:col-span-10 pt-10">
+                                <p>Roda Gigi [gear] : Melambangkan perputaran dan keterpaduan dalam industri hulu-hilir, baik dari proses, kontrol, kualitas, serta utilitas yang menjadi kompetensi dasar alumni SMTI.</p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <img src="vscode/image/labu.png" class="w-32">
+                    </div>
+                    <div class="md:col-span-10 pt-10">
+                            <p>Erlenmeyer : Melambangan SMTI adalah sekolah menengah kejuruan dengan kompetensi keahlian kimia industri dan kimia analisis.</p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <img src="vscode/image/pena.png" class="w-32">
+                    </div>
+                    <div class="md:col-span-10 pt-10">
+                            <p>Ujung Pena (Menghadap keatas) : Melambangkan sebuah sekolah yang selalu berkembang mengikuti tuntutan jaman dalam mencetak alumni-alumni yang dapat bersaing di kancah global</p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <img src="vscode/image/buku.png" class="w-32">
+                    </div>
+                    <div class="md:col-span-10 pt-10">
+                            <p>Buku : Melambangkan lembaga pendidikan dan sumber pengetahuan yang dapat membentuk karakter almni-alumni yang kompeten.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      
+    </div>
+      <div id="section-visimisi" class="section hidden pb-12">
+        <div class="text-left">
+          <h1>Profil > Visi & Misi</h1><br>
+          <h1 class="text-4xl">Visi & Misi SMTI Yogyakarta</h1><br>
+        </div>
+        <img src="vscode/image/visimisi.png"><br>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="container h-fit bg-white shadow-lg rounded-lg">
+            <h1 class="px-4 pt-4 text-4xl">Visi</h1>
+            <p class="p-4">Menjadi penyelenggara pendidikan kejuruan industri yang excellence dan bertaraf internasional.</p>
+          </div>
+          <div class="container h-fit bg-white shadow-lg rounded-lg">
+            <h1 class="px-4 pt-4 text-4xl">Misi</h1>
+            <ul class="list-disc pr-4 py-4 pl-12">
+              <li class="text-justify">Menyelenggarakan pendidikan kejuruan dual system dengan STEM learning model bertaraf internasional;</li>
+              <li class="text-justify">Melaksanakan pengabdian masyarakat dalam pengembangan ekosistem IKM;</li>
+              <li class="text-justify">Mengembangkan kompetensi industri 4.0 melalui pembangunan satelit PIDI 4.0;</li>
+              <li class="text-justify">Mengembangkan skema kompetensi dan uji kompetensi LSP;</li>
+              <li class="text-justify">Mengembangkan kelas industri.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      
+  
+      <div id="section-pf" class="section hidden">
+        <div class="text-left">
+          <h1>Profil > Tugas Pokok & Fungsi</h1><br>
+          <h1 class="text-4xl">Tugas Pokok & Fungsi</h1><br>
+        </div>
+        <div class="container md:w-4/5 pt-4 bg-white shadow-lg rounded-lg">
+        <div class="tabs grid grid-cols-2">
+            <h3 class="tab-title bg-indigo-100 text-center p-4 cursor-pointer font-semibold active">Tugas Pokok</h3>
+            <h3 class="tab-title bg-indigo-100 text-center p-4 cursor-pointer font-semibold">Fungsi</h3>
+        </div>
+        <div class="tab-content p-10 mb-10">
+            <div class="tab-item active text-gray-800 text-justify leading-relaxed">
+              <h1 class="text-xl">Dalam mengemban Visi dan Misi SMTI Yogyakarta memiliki Tugas Pokok :</h1><br>
+              <h1>" Melaksanakan Pendidikan Kejuruan formal teknologi industri bagi tamatan Sekolah Lanjutan Tingkat Pertama (SLTP ) sesuai peraturan perundang-undangan yang berlaku, untuk menghasilkan tenaga-tenaga ahli teknologi menengah di bidang industri dengan menggunakan laboratorium, perbengkelan dan sarana fisik lainnya."</h1> 
+            </div>
+            <div class="tab-item hidden text-gray-800 text-justify leading-relaxed">
+                <h1 class="text-xl">Untuk menyelenggarakan Tugas Pokok SMK-SMTI Yogyakarta memiliki fungsi :
+                </h1><br>
+                <div class="grid grid-cols-12 gap-0">
+                    <div class="col-span-1">
+                    <i class="far fa-check-circle"></i>
+                    </div>
+                    <div class="col-span-11">
+                        <p>Melaksanakan Pendidikan dan Pelatihan sesuai Kurikulum yang ditetapkan oleh Pusat Pendidikan dan Pelatihan Industri Kementerian Perindustrian serta Kementerian Pendidikan dan Kebudayaan Nasional.</p>
+                    </div>
+                    <div class="col-span-1">
+                        <i class="far fa-check-circle"></i>
+                    </div>
+                    <div class="col-span-11">
+                        <p>
+                            Melaksanakan upaya peningkatan mutu lulusan ,dengan jalan selalu mengevaluasi kurikulum yang dipakai dan meyempurnakannya sesuai kebutuhan pasar kerja.</p>
+                    </div>
+                    <div class="col-span-1">
+                        <i class="far fa-check-circle"></i>
+                    </div>
+                    <div class="col-span-11">
+                        <p>
+                            Membina hubungan kerjasama dengan dunia usaha, dunia industri, orangtua siswa dan alumni serta masyarakat pada umumnya.</p>
+                    </div>
+                    <div class="col-span-1">
+                        <i class="far fa-check-circle"></i>
+                    </div>
+                    <div class="col-span-11">
+                        <p>
+                            Melaksanakan Bimbingan dan Penyuluhan bagi siswa.</p>
+                    </div>
+                    <div class="col-span-1">
+                        <i class="far fa-check-circle"></i>
+                    </div>
+                    <div class="col-span-11">
+                        <p>
+                            Melaksanakan pengadaan dan pemeliharaan alat perlengkapan dan bahan proses belajar- mengajar dan pelatihan praktek siswa sesuai tuntutan kurikulum yang berlaku.</p>
+                    </div>
+                    <div class="col-span-1">
+                        <i class="far fa-check-circle"></i>
+                    </div>
+                    <div class="col-span-11">
+                        <p>
+                            Melaksanakan pengembangan Sumber Daya Manusia guru maupun karyawan dalam mendukung tercapainya tujuan institusi.</p>
+                    </div>
+                    <div class="col-span-1">
+                        <i class="far fa-check-circle"></i>
+                    </div>
+                    <div class="col-span-11">
+                        <p>Melaksanakan Urusan Tata Usaha dan Administrasi Pendidikan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      </div>
+  
+      <div id="section-so" class="section hidden">
+        <div class="text-left">
+          <h1>Profil > Struktur Organisasi</h1><br>
+          <h1 class="text-4xl">Struktur Organisasi</h1><br><br>
+          <p>Dasar Hukum:</p>
+          <p>Peraturan Menteri Perindustrian <a href="https://www.smtijogja.sch.id/filebox/media/sk_permenperin_organisasi_dan_tata_kerja.pdf" class="text-blue-500 hover:text-blue-900 hover:underline">Nomor 77/M-IND/PER/8/2011</a> Tentang Organisasi dan Tata Kerja Sekolah Menengah Kejuruan-SMTI.</p><br>
+        </div>
+        <button class="rounded-full bg-green-400 hover:bg-green-700 text-white py-2 px-4">
+            <a href="https://www.smtijogja.sch.id/general_assets/images/struktur-organisasi-2024-q4.jpg" download>
+              <i class="fas fa-download"></i> Unduh Struktur Organisasi
+            </a>
+        </button>
+        <img class="pt-4 pb-12" src="vscode/image/struktur.jpg">
+      </div>
+    </div>
+    
+  </div>
+  
+
+    </div>
+  
+
+      <div>
+        
+
+        </div>
+      </div>
+
+      <footer class="bg-cyan-900 text-white py-8 sm:py-12">
+        <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:mx-16 lg:mx-48 px-4">
+       
+          <div class="text-center md:text-left pr-0 md:pr-4 lg:pr-9">
+            <img src="vscode/image/footer-logo.png" class="mx-auto md:mx-0 w-28 sm:w-32 md:w-40 lg:w-auto">
+            <p class="pt-4">In Association with</p>
+            <div class="flex justify-center md:justify-start space-x-2 sm:space-x-4 mt-4">
+              <img src="vscode/image/association-logo-1.png" alt="Logo 1" class="w-16 h-10 sm:w-20 sm:h-12 md:w-28 md:h-12 lg:w-64 lg:h-12 object-contain">
+              <img src="vscode/image/association-logo-2.png" alt="Logo 2" class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain">
+              <img src="vscode/image/association-logo-3.png" alt="Logo 3" class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain">
+              <img src="vscode/image/association-logo-4.png" alt="Logo 4" class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain">
+            </div>
+          </div>
+      
+          <div class="flex flex-col items-center md:pl-24 md:items-start">
+            <h3 class="font-semibold mb-4 text-lg">LINK PENTING</h3>
+            <ul class="space-y-2 text-sm text-center md:text-left">
+              <li><a href="https://ppdb.smtijogja.sch.id/" class="whitespace-nowrap hover:text-green-300">PPDB</a></li>
+              <li><a href="https://virtualtour.smtijogja.sch.id/" class="whitespace-nowrap hover:text-green-300">Virtual Tour</a></li>
+              <li><a href="https://api.whatsapp.com/send/?phone=6281325558181&text" class="whitespace-nowrap hover:text-green-300">Hotline WA</a></li>
+              <li><a href="https://accounts.cdcbpsdmi.kemenperin.go.id/login" class="whitespace-nowrap hover:text-green-300">Tracer Study CDC</a></li>
+              <li><a href="https://drive.google.com/file/d/1drYJ2GrRNniMyR8eJ35SRc7PTI8oREj1/view" class="whitespace-nowrap hover:text-green-300">Safety Induction</a></li>
+            </ul>
+          </div>
+      
+          <div class="text-center md:text-left">
+            <h3 class="font-semibold mb-4 text-lg">KONTAK KAMI</h3>
+            <ul class="space-y-2 text-sm">
+              <li>Telepon: (0274) 513201</li>
+              <li>Faksimile: (0274) 512121</li>
+              <li>WhatsApp: (+62) 813 2555 8181</li>
+              <li class="flex justify-center md:justify-start space-x-2 mt-2">
+                <a href="#"><img src="vscode/image/logo-gmail.svg" class="w-6 h-6" alt="Gmail"></a>
+                <a href="#"><img src="vscode/image/instagram-new.svg" class="w-6 h-6" alt="Instagram"></a>
+                <a href="#"><img src="vscode/image/facebook-new.svg" class="w-6 h-6" alt="Facebook"></a>
+                <a href="#"><img src="vscode/image/tiktok-new.svg" class="w-6 h-6" alt="TikTok"></a>
+                <a href="#"><img src="vscode/image/twitter-new.svg" class="w-6 h-6" alt="Twitter"></a>
+                <a href="#"><img src="vscode/image/youtube-new.svg" class="w-6 h-6" alt="YouTube"></a>
+                <a href="#"><img src="vscode/image/whatsapp-new.svg" class="w-6 h-6" alt="WhatsApp"></a>
+              </li>
+              <li class="text-sm mt-4">Jl. Kusumanegara No.3, Semaki, Kec. Umbulharjo, Kota Yogyakarta, DIY 55166</li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="container mx-auto pt-8 px-4">
+          <hr class="border-t border-gray-500">
+        </div> 
+      
+        <div class="text-center pt-8">
+          <h3>HAK CIPTA © 2020 SMK-SMTI YOGYAKARTA</h3>
+        </div>
+      </footer>
+
+      <script>
+        const tabs = document.querySelectorAll('.tab-title');
+        const tabContents = document.querySelectorAll('.tab-item');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                tabContents.forEach((content) => {
+                    content.classList.add('hidden');
+                });
+                tabs.forEach((tab) => {
+                    tab.classList.remove('active');
+                    tab.classList.replace('bg-white', 'bg-indigo-100');
+                    tab.classList.remove('text-indigo-600');
+                });
+
+                tabContents[index].classList.remove('hidden');
+                tab.classList.add('active');
+                tab.classList.replace('bg-indigo-100', 'bg-white');
+                tab.classList.add('text-indigo-600');
+            });
+        });
+    </script> 
+
+     
+      <script>
+        function activateSection(sectionId) {
+          // Hide all sections
+          document.querySelectorAll('.section').forEach(section => {
+            section.classList.add('hidden');
+          });
+      
+          // Show the clicked section
+          document.getElementById(sectionId).classList.remove('hidden');
+      
+          // Remove 'active' class from all buttons
+          document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.classList.remove('active');
+          });
+      
+          // Add 'active' class to the clicked button
+          document.querySelector(`[data-target="${sectionId}"]`).classList.add('active');
+        }
+      </script>
+
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Select all dropdown buttons and menus
+                const dropdownButtons = document.querySelectorAll('[id^="dropdownMenuButton"]');
+                const dropdownMenus = document.querySelectorAll('[id^="dropdownMenu"]');
+            
+                dropdownButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        // Find the corresponding dropdown menu
+                        const targetMenuId = this.id.replace('Button', '');
+                        const targetMenu = document.getElementById(targetMenuId);
+                        
+                        // Toggle visibility of the target menu
+                        targetMenu.classList.toggle('hidden');
+                    });
+                });
+            
+                document.addEventListener('click', function(event) {
+                    // Close dropdowns if the click is outside of any dropdown
+                    if (![...dropdownButtons].some(button => button.contains(event.target))) {
+                        dropdownMenus.forEach(menu => menu.classList.add('hidden'));
+                    }
+                });
+            });
+            
+            
+            </script>
+      
+      
+
+</body>
+</html>
